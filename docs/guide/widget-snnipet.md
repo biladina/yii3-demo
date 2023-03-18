@@ -1,8 +1,8 @@
 # Widget snippet
 
-Allow creating widgets using a snippet (file configuration).
+Allow create widgets using a snippet (file configuration).
 
-The following code shows how to create a navbar for flowbite theme.
+The following code shows how to create a navbar for the flowbite theme.
 
 navbar-flowbite-default.php
 

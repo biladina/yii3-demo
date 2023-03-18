@@ -1,4 +1,4 @@
-## Application parameters
+# Application parameters
 
 This [ParameterService.php](https://github.com/yii-tools/service/blob/main/src/ParameterService.php) allows you
 to globally configure some important parameters of your application, such as `name` and `charset`, you could also add

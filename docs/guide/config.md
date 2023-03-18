@@ -1,4 +1,4 @@
-## Yii config
+# Yii config
 
 Specifies the way to assemble the configuration for the [Yii Dependency Injection](https://github.com/yiisoft/di) container for the application.
 

@@ -1,4 +1,4 @@
-## Routing
+# Routing
 
 The [Yii Router](https://github.com/yiisoft/router) is the main entry point for the application.
 

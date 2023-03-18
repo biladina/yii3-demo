@@ -1,4 +1,4 @@
-## Http Factories
+# Http Factories
 
 The [PSR-17](https://www.php-fig.org/psr/psr-17/) specification defines interfaces for HTTP factories.
 

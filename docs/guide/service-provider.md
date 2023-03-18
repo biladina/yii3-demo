@@ -1,4 +1,4 @@
-## Service provider
+# Service provider
 
 A service provider is a special class that's responsible for providing complex services or groups of dependencies for
 the container and extensions of existing services.

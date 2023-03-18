@@ -1,4 +1,4 @@
-## Application
+# Application
 
 The [Yii HTTP Application](https://github.com/yiisoft/yii-http) provides the `Application::class`, as well as the events
 and handlers needed to interact with HTTP.
