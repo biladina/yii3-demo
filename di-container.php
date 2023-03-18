@@ -15,7 +15,7 @@ return [
             'web/*.php',
         ],
         'di-console' => ['$di'],
-        'bootstrap' => [],
+        'bootstrap' => '?bootstrap.php',
         'bootstrap-web' => '$bootstrap',
         'bootstrap-console' => '$bootstrap',
         'events' => [],

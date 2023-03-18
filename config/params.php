@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Command\Hello;
-use App\Command\Serve;
+use Yii\Demo\Command\Serve;
 use Psr\Log\LogLevel;
 use Yii\Service\ParameterService;
 use Yiisoft\Aliases\Aliases;
@@ -50,6 +49,7 @@ return [
             '@public' => '@root/public',
             '@resources' => '@root/resources',
             '@runtime' => '@root/runtime',
+            '@app-snippet' => '@resources/snippet',
             '@vendor' => '@root/vendor',
             '@views' => '@resources/views',
         ],

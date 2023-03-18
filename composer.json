@@ -1,11 +1,10 @@
 {
-    "name": "yii-tools/app",
-    "type": "project",
-    "description": "Application Template for YiiFramework v. 3.0.",
+    "name": "yii-tools/demo",
+    "type": "library",
+    "description": "Demo for YiiFramework v. 3.0.",
     "keywords": [
         "yii-tools",
-        "application",
-        "template",
+        "demo",
         "yii3"
     ],
     "minimum-stability": "dev",
@@ -19,6 +18,9 @@
         "psr/http-server-handler": "^1.0",
         "symfony/console": "^6.0",
         "vlucas/phpdotenv": "^5.3",
+        "yii-tools/awesome-component": "^1.0@dev",
+        "yii-tools/contact-form": "^1.0@dev",
+        "yii-tools/flowbite-asset": "^1.0@dev",
         "yii-tools/html": "^1.0@dev",
         "yii-tools/service": "^1.0@dev",
         "yiisoft/aliases": "^2.0|^3.0",
@@ -61,17 +63,16 @@
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.15.2",
         "roave/infection-static-analysis-plugin": "^1.25",
-        "vimeo/psalm": "^4.30|^5.4",
-        "yii-tools/contact-form": "1.0.x-dev"
+        "vimeo/psalm": "^5.8"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src"
+            "Yii\\Demo\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests"
+            "Yii\\Demo\\Tests\\": "tests"
         }
     },
     "config": {
@@ -91,11 +92,11 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "App\\Installer::copyEnvFile"
+            "Yii\\Demo\\Installer::copyEnvFile"
         ],
         "post-update-cmd": [
-            "App\\Installer::postUpdate",
-            "App\\Installer::copyEnvFile"
+            "Yii\\Demo\\Installer::postUpdate",
+            "Yii\\Demo\\Installer::copyEnvFile"
         ],
         "check-dependencies": "composer-require-checker",
         "psalm": "psalm",
