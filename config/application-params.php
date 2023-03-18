@@ -10,6 +10,6 @@ return [
         'theme' => 'dark', // light, dark
         'menu' => [
             0 => ['label' => 'Home', 'route' => 'home'],
-        ]
+        ],
     ],
 ];
