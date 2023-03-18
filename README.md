@@ -77,7 +77,7 @@ If you want to customize your **demo**, read the [docs](/docs/config.md).
 [![codecov](https://codecov.io/gh/yii-tools/demo/branch/main/graph/badge.svg?token=L2M7HL7OKI)](https://codecov.io/gh/yii-tools/demo)
 [![static analysis](https://github.com/yii-tools/demo/workflows/static%20analysis/badge.svg)](https://github.com/yii-tools/demo/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yii-tools/demo/coverage.svg)](https://shepherd.dev/github/yii-tools/demo)
-[![StyleCI](https://github.styleci.io/repos/584779096/shield?branch=main)](https://github.styleci.io/repos/584779096?branch=main)
+[![StyleCI](https://github.styleci.io/repos/613558452/shield?branch=main)](https://github.styleci.io/repos/613558452?branch=main)
 
 ## License
 
