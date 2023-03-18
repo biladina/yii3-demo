@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Yii\Demo\Command\hello;
 use Yii\Demo\Command\Serve;
 use Psr\Log\LogLevel;
 use Yii\Service\ParameterService;
