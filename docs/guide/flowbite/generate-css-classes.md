@@ -1,4 +1,4 @@
-# Generate `CSS` classes
+# Generate `CSS` classes for `Flowbite` components
 
 This guide will help you to generate `CSS` classes for your `HTML` elements.
 
@@ -31,14 +31,14 @@ module.exports = {
 }
 ```
 
-## Generate `CSS` classes classes for `Flowbite` components
+## Generate `CSS` classes
 
 ```bash
-npx npx tailwindcss -i ./node_modules/tailwindcss/tailwind.css -o ./resources/asset/css/app.css --watch
+npx tailwindcss -i ./node_modules/tailwindcss/tailwind.css -o ./resources/asset/css/app.css --watch
 ```
 
-## Generate `CSS` classes for `Flowbite` components minify
+## Generate `CSS` classes and minify
 
 ```bash
-npx npx tailwindcss -i ./node_modules/tailwindcss/tailwind.css -o ./resources/asset/css/app.min.css --watch --minify
+npx tailwindcss -i ./node_modules/tailwindcss/tailwind.css -o ./resources/asset/css/app.min.css --watch --minify
 ```
