@@ -31,3 +31,4 @@ If you want to configure your application you can see the corresponding guide:
 ## Flowbite 
 
 - [Generate css classes](/docs/guide/flowbite/generate-css-classes.md)
+- [Dark mode](/docs/guide/flowbite/dark-mode.md)
