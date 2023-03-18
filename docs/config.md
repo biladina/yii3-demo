@@ -26,4 +26,3 @@ If you want to configure your application you can see the corresponding guide:
 - [Container delegates](/docs/guide/delegates.md)
 - [Multiple apps with sub folder middleware](/docs/guide/multiple-apps.md)
 - [Service providers](/docs/guide/service-provider.md)
-- [Widgets factory configuration](/docs/guide/widgets.md)
