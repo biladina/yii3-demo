@@ -1,4 +1,4 @@
-## Many applications with `Subfolder::class` middleware
+# Many applications with `Subfolder::class` middleware
 
 If you want to use subfolder middleware for URL routing, you need to adjust `config/params.php` file.
 

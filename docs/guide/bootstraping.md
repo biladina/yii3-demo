@@ -1,4 +1,4 @@
-## Bootstrapping
+# Bootstrapping
 
 The bootstrapping process is the first step of the application.
 

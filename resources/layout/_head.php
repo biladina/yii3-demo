@@ -3,11 +3,13 @@
 declare(strict_types=1);
 
 use Yii\Html\Helper\Encode;
+use Yii\Service\ParameterService;
+use Yiisoft\View\WebView;
 
 /**
- * @var \App\Service\ParameterService $parameterService
+ * @var ParameterService $parameterService
+ * @var WebView $this
  */
-
 ?>
 
 <head>

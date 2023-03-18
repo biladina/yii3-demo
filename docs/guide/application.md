@@ -1,4 +1,4 @@
-## Application
+# Application
 
 The [Yii HTTP Application](https://github.com/yiisoft/yii-http) provides the `Application::class`, as well as the events
 and handlers needed to interact with HTTP.
@@ -25,7 +25,7 @@ return [
         '__construct()' => [
             'dispatcher' => DynamicReference::to(
                 static function (Injector $injector) use ($params) {
-                    return ($injector->make(MiddlewareDispatcher::class))->withMiddlewares($params['middlewares']);
+                    return $injector->make(MiddlewareDispatcher::class)->withMiddlewares($params['middlewares']);
                 },
             ),
             'fallbackHandler' => Reference::to(NotFoundHandler::class),

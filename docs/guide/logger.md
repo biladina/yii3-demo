@@ -1,4 +1,4 @@
-## Logging 
+# Logging 
 
 The [Yii Logging Library](https://github.com/yiisoft/log) is used to log messages.
 

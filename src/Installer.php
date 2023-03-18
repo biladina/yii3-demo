@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace Yii\Demo;
 
 use FilesystemIterator as FSIterator;
 use RecursiveDirectoryIterator as DirIterator;

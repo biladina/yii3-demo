@@ -1,15 +1,17 @@
 <p align="center">
-    <a href="https://github.com/yii-tools/app" target="_blank">
+    <a href="https://github.com/yii-tools/demo" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/121752654?s=200&v=4" height="100px">
     </a>
-    <h1 align="center">Application Template for YiiFramework v 3.0.</h1>
-    <h3 align="center">The best for creating projects</h3>
+    <a href="https://flowbite.com/" target="_blank">
+        <img src="https://flowbite.com/docs/images/logo.svg" height="100px">
+    </a>    
+    <h1 align="center">Flowbyte Demo for YiiFramework v 3.0.</h1>
     <br>
 </p>
 
 <p align="center">
-    <a href="https://github.com/yii-tools/app" target="_blank">
-        <img src="docs/images/home.png" alt="Home page" >
+    <a href="https://github.com/yii-tools/demo" target="_blank">
+        <img src="docs/images/home.jpeg" alt="Home page" >
     </a>
 </p>
 
@@ -23,13 +25,13 @@ To install this package, you need a [composer](https://getcomposer.org/).
 
 You can then install this project template using the following command:
 
-```
-composer create-project --prefer-dist --stability=dev yii-tools/app <your project>
+```shell
+composer require yii-tools/demo
 ```
 
 To launch development web server run:
 
-```
+```shell
 composer run serve
 ```
 
@@ -67,41 +69,15 @@ root
 
 ## Configuration
 
-If you want to customize your **app**, read the [docs](/docs/config.md).
-
-## Checking dependencies
-
-This package uses [composer-require-checker](https://github.com/maglnet/ComposerRequireChecker) to check if all dependencies are correctly defined in `composer.json`.
-
-To run the checker, execute the following command:
-
-```shell
-composer run check-dependencies
-```
-
-## Static analysis
-
-The code is statically analyzed with [Psalm](https://psalm.dev/). To run static analysis:
-
-```shell
-composer run psalm
-```
-
-## Testing
-
-The code is tested with [Codeception](https://codeception.com/). To run tests:
-
-```
-composer run test
-```
+If you want to customize your **demo**, read the [docs](/docs/config.md).
 
 ## CI status
 
-[![build](https://github.com/yii-tools/app/workflows/build/badge.svg)](https://github.com/yii-tools/app/actions)
-[![codecov](https://codecov.io/gh/yii-tools/app/branch/main/graph/badge.svg?token=L2M7HL7OKI)](https://codecov.io/gh/yii-tools/app)
-[![static analysis](https://github.com/yii-tools/app/workflows/static%20analysis/badge.svg)](https://github.com/yii-tools/app/actions?query=workflow%3A%22static+analysis%22)
-[![type-coverage](https://shepherd.dev/github/yii-tools/app/coverage.svg)](https://shepherd.dev/github/yii-tools/app)
-[![StyleCI](https://github.styleci.io/repos/584779096/shield?branch=main)](https://github.styleci.io/repos/584779096?branch=main)
+[![build](https://github.com/yii-tools/demo/workflows/build/badge.svg)](https://github.com/yii-tools/demo/actions)
+[![codecov](https://codecov.io/gh/yii-tools/demo/branch/main/graph/badge.svg?token=L2M7HL7OKI)](https://codecov.io/gh/yii-tools/demo)
+[![static analysis](https://github.com/yii-tools/demo/workflows/static%20analysis/badge.svg)](https://github.com/yii-tools/demo/actions?query=workflow%3A%22static+analysis%22)
+[![type-coverage](https://shepherd.dev/github/yii-tools/demo/coverage.svg)](https://shepherd.dev/github/yii-tools/demo)
+[![StyleCI](https://github.styleci.io/repos/613558452/shield?branch=main)](https://github.styleci.io/repos/613558452?branch=main)
 
 ## License
 

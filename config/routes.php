@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Controller\SiteController;
+use Yii\Demo\Controller\SiteController;
 use Yiisoft\Router\Route;
 
 return [

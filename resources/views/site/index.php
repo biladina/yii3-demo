@@ -15,12 +15,12 @@ $this->setTitle($parameterService->get('app.name'));
 ?>
 
 <div class="text-center">
-    <h1><?= $translator->translate('site.hello')?>!</h1>
+    <h1 class="dark:text-white"><?= $translator->translate('site.hello')?>!</h1>
 
-    <p><?= $translator->translate('site.start_with')?>!</p>
+    <p class="dark:text-white"><?= $translator->translate('site.start_with')?>!</p>
 
     <p>
-        <a href="https://github.com/yiisoft/docs/tree/master/guide/en" target="_blank" rel="noopener">
+        <a class="dark:text-white" href="https://github.com/yiisoft/docs/tree/master/guide/en" target="_blank" rel="noopener">
             <i><?= $translator->translate('site.guide_remind')?>.</i>
         </a>
     </p>

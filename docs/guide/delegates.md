@@ -1,4 +1,4 @@
-## Container delegates
+# Container delegates
 
 Each delegate is a callable returning a container instance that's used in case a service can not be found in a primary
 container. 

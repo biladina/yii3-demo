@@ -1,4 +1,4 @@
-## Translator
+# Translator
 
 The [Yii Message Translator](https://github.com/yiisoft/translator) allows translating messages into several languages.
 

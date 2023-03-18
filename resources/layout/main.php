@@ -2,20 +2,19 @@
 
 declare(strict_types=1);
 
-use App\Asset\AppAsset;
-use Yiisoft\I18n\Locale;
+use Yii\Demo\Asset\AppAsset;
 use Yii\Html\Helper\Encode;
+use Yii\Service\ParameterService;
+use Yiisoft\Assets\AssetManager;
+use Yiisoft\I18n\Locale;
+use Yiisoft\View\WebView;
 
 /**
- * @var App\Service\ParameterService $parameterService
- * @var Yiisoft\Aliases\Aliases $aliases
- * @var Yiisoft\Assets\AssetManager $assetManager
  * @var string $content
- * @var string|null $csrf
+ * @var ParameterService $parameterService
+ * @var AssetManager $assetManager
  * @var Locale $locale
- * @var Yiisoft\View\WebView $this
- * @var Yiisoft\Router\CurrentRoute $currentRoute
- * @var Yiisoft\Router\UrlGeneratorInterface $urlGenerator
+ * @var WebView $this
  */
 
 $assetManager->register(AppAsset::class);
@@ -32,7 +31,10 @@ $this->addJsVars($assetManager->getJsVars());
     <html lang="<?= Encode::content($locale->language()) ?>">
         <?= $this->render('_head', ['parameterService' => $parameterService]) ?>
         <?= $this->render('_header') ?>
-        <body class="flex flex-col h-screen" style="justify-content: space-between;">
+        <body
+            class="flex flex-col h-screen bg-gray-200 justify-between dark:bg-gray-500"
+            data-theme="<?= $parameterService->get('app.theme') ?>"
+        >
             <?php $this->beginBody() ?>
                 <?= $content ?>
                 <?= $this->render('_footer') ?>

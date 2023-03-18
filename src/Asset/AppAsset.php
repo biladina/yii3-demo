@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Asset;
+namespace Yii\Demo\Asset;
 
 use Yiisoft\Assets\AssetBundle;
 
@@ -13,6 +13,10 @@ final class AppAsset extends AssetBundle
 {
     public string|null $basePath = '@assets';
     public string|null $baseUrl = '@assetsUrl';
-    public string|null $sourcePath = '@resources/assets/css';
-    public array $css = ['site.css'];
+    public string|null $sourcePath = '@resources/asset';
+    public array $css = ['css/app.css'];
+    public array $js = ['js/app.js'];
+    public array $depends = [
+        \Yii\Fontawesome\Asset\AllCssCdnAsset::class,
+    ];
 }
