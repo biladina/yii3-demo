@@ -2,14 +2,14 @@
     <a href="https://github.com/yii-tools/app" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/121752654?s=200&v=4" height="100px">
     </a>
-    <h1 align="center">Application Template for YiiFramework v 3.0.</h1>
-    <h3 align="center">The best for creating projects</h3>
+    <h1 align="center">Demo for YiiFramework v 3.0.</h1>
+    <h3 align="center">Developed for Yii Tools.</h3>
     <br>
 </p>
 
 <p align="center">
     <a href="https://github.com/yii-tools/app" target="_blank">
-        <img src="docs/images/home.png" alt="Home page" >
+        <img src="docs/images/home.jpeg" alt="Home page" >
     </a>
 </p>
 

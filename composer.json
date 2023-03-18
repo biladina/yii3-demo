@@ -21,6 +21,7 @@
         "yii-tools/awesome-component": "^1.0@dev",
         "yii-tools/contact-form": "^1.0@dev",
         "yii-tools/flowbite-asset": "^1.0@dev",
+        "yii-tools/font-awesome": "^1.0@dev",
         "yii-tools/html": "^1.0@dev",
         "yii-tools/service": "^1.0@dev",
         "yiisoft/aliases": "^2.0|^3.0",
