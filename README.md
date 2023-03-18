@@ -26,7 +26,9 @@ To install this package, you need a [composer](https://getcomposer.org/).
 You can then install this project template using the following command:
 
 ```shell
-composer require yii-tools/demo
+git clone https://github.com/yii-tools/demo.git demo
+cd demo
+composer update --prefer-dist -vvv
 ```
 
 To launch development web server run:
