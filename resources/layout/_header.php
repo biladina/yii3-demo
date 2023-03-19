@@ -34,7 +34,7 @@ foreach ($items as $key => $item) {
 ?>
 
 <?=
-    NavBar::widget(file: $aliases->get('@app-snippet/navbar-flowbite.php'))
+    NavBar::widget(file: $aliases->get('@snippet/flowbite/navbar/default-navbar.php'))
         ->brandImage(
             Img::widget()
                 ->alt('YiiFramework')
@@ -45,8 +45,9 @@ foreach ($items as $key => $item) {
                         : 'https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg'
                 )
         )
+        ->brandLink('https://www.yiiframework.com/')
         ->menu(
-            Menu::widget(file: $aliases->get('@app-snippet/menu-flowbite.php'))
+            Menu::widget(file: $aliases->get('@snippet/flowbite/navbar/menu/default-navbar.php'))
                 ->currentPath($routeRequest)
                 ->items(...$menuItems)
                 ->id('navbar-default')
