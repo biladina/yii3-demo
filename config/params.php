@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use Psr\Log\LogLevel;
 use Yii\Demo\Command\Hello;
 use Yii\Demo\Command\Serve;
-use Psr\Log\LogLevel;
 use Yii\Service\ParameterService;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
@@ -15,6 +15,7 @@ use Yiisoft\Log\Target\File\FileTarget;
 use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Router\Middleware\Router;
 use Yiisoft\Router\UrlGeneratorInterface;
+use Yiisoft\Session\Flash\FlashInterface;
 use Yiisoft\Session\SessionMiddleware;
 use Yiisoft\Translator\TranslatorInterface;
 use Yiisoft\Yii\View\CsrfViewInjection;
@@ -99,6 +100,7 @@ return [
             'aliases' => Reference::to(Aliases::class),
             'assetManager' => Reference::to(AssetManager::class),
             'currentRoute' => Reference::to(CurrentRoute::class),
+            'flash' => Reference::to(FlashInterface::class),
             'locale' => Reference::to(Locale::class),
             'parameterService' => Reference::to(ParameterService::class),
             'translator' => Reference::to(TranslatorInterface::class),

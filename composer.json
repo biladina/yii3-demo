@@ -52,6 +52,7 @@
         "yiisoft/yii-middleware": "dev-master",
         "yiisoft/yii-runner-console": "^2.0",
         "yiisoft/yii-runner-http": "^2.0",
+        "yiisoft/yii-runner-roadrunner": "^2.0",
         "yiisoft/yii-view": "^6.0"
     },
     "require-dev": {

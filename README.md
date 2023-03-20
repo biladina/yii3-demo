@@ -31,10 +31,17 @@ cd demo
 composer update --prefer-dist -vvv
 ```
 
-To launch development web server run:
+To launch the application for PHP built-in web server, run the following command:
 
 ```shell
 composer run serve
+```
+
+To launch the application for [RoadRunner](https://roadrunner.dev/) web server, run the following command:
+
+```shell
+./vendor/bin/rr get-binary
+./rr serve
 ```
 
 Now you should be able to access the application through the URL printed to console. Usually it is http://localhost:8080.
@@ -54,6 +61,7 @@ root
 ├── public                          Files publicly accessible from the Internet.
 │   └── assets                      Published assets.
 │   └── index.php                   Entry script.
+│   └── index-rr.php                Entry script for RoadRunner.
 ├── resources                       Application resources.
 │   └── assets                      Custom assets.
 │   └── messages                    Message translations.
@@ -66,7 +74,12 @@ root
 │    └── Controller                 Web controller classes.
 │    └── Handler                    Handlers for events.
 |    └── Installer.php              Installer.
+├── .env                            Environment variables.
+├── .rr-yaml                        RoadRunner configuration.
+├── codeception.yml                 Codeception configuration.
+├── composer.json                   Composer configuration.
 ├── di-container.php                Dependency injection container configuration.
+├── tailwind.config.js              Tailwind CSS configuration.
 ```
 
 ## Configuration

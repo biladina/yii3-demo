@@ -7,16 +7,17 @@ use Yii\Html\Helper\Encode;
 use Yii\Service\ParameterService;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\I18n\Locale;
+use Yiisoft\Session\Flash\FlashInterface;
 use Yiisoft\View\WebView;
 
 /**
  * @var string $content
+ * @var FlashInterface $flash
  * @var ParameterService $parameterService
  * @var AssetManager $assetManager
  * @var Locale $locale
  * @var WebView $this
  */
-
 $assetManager->register(AppAsset::class);
 
 $this->addCssFiles($assetManager->getCssFiles());
@@ -30,15 +31,18 @@ $this->addJsVars($assetManager->getJsVars());
     <!DOCTYPE html>
     <html lang="<?= Encode::content($locale->language()) ?>">
         <?= $this->render('_head', ['parameterService' => $parameterService]) ?>
-        <?= $this->render('_header') ?>
-        <body
-            class="flex flex-col h-screen bg-gray-200 justify-between dark:bg-gray-500"
-            data-theme="<?= $parameterService->get('app.theme') ?>"
-        >
-            <?php $this->beginBody() ?>
+        <?php $this->beginBody() ?>
+            <body
+                class="flex flex-col h-screen bg-gray-200 justify-between dark:bg-gray-500"
+                data-theme="<?= $parameterService->get('app.theme') ?>"
+            >
+                <header>
+                    <?= $this->render('_header') ?>
+                    <?= $this->render('_alert', ['flash' => $flash]) ?>
+                </header>
                 <?= $content ?>
                 <?= $this->render('_footer') ?>
-            <?php $this->endBody() ?>
-        </body>
+            </body>
+        <?php $this->endBody() ?>
     </html>
 <?php $this->endPage() ?>

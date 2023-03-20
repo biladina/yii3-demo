@@ -54,4 +54,3 @@ foreach ($items as $key => $item) {
         )
         ->begin() ?>
 <?= NavBar::end();
-
