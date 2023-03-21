@@ -6,7 +6,7 @@ use Yii\Html\Helper\Encode;
 use Yii\Service\ParameterService;
 
 /**
- * @var ParameterService $parameterService
+ * @var ParametersService $parameters
  */
 ?>
 
@@ -16,7 +16,7 @@ use Yii\Service\ParameterService;
             <a class="hover:underline text-center hover:underline" href="https://www.yiiframework.com/" target="_blank" rel="noopener">
                 <span class="text-sm text-gray-700 sm:text-center text-gray-600 dark:text-white">
                     © <?= date('Y') ?>
-                    <?= Encode::content($parameterService->get('app.name')) . '™. All Rights Reserved.' ?>
+                    <?= Encode::content($parameters->get('app.name')) . '™. All Rights Reserved.' ?>
                 </span>
             </a>
             <div class="flex mt-4 space-x-6 justify-center sm:mt-0 p-2">

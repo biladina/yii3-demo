@@ -6,6 +6,7 @@ use Yii\Component\Menu;
 use Yii\Component\MenuItems;
 use Yii\Component\NavBar;
 use Yii\Component\Tag\Img;
+use Yii\Service\ParameterService;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Router\UrlGeneratorInterface;
@@ -14,6 +15,7 @@ use Yiisoft\Translator\TranslatorInterface;
 /**
  * @var Aliases $aliases
  * @var CurrentRoute $currentRoute
+ * @var ParameterService $parameters
  * @var UrlGeneratorInterface $urlGenerator
  * @var TranslatorInterface $translator
  */
@@ -24,7 +26,7 @@ if ($currentRoute->getUri() !== null) {
 }
 
 $menuItems = [];
-$items = $parameterService->get('app.menu');
+$items = $parameters->get('app.menu');
 
 foreach ($items as $key => $item) {
     $menuItems[] = MenuItems::create()
@@ -40,7 +42,7 @@ foreach ($items as $key => $item) {
                 ->alt('YiiFramework')
                 ->class('h-6 mr-3 sm:h-9')
                 ->src(
-                    $parameterService->get('app.theme') === 'dark'
+                    $parameters->get('app.theme') === 'dark'
                         ? 'https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg'
                         : 'https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg'
                 )

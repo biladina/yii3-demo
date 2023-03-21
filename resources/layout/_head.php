@@ -7,13 +7,13 @@ use Yii\Service\ParameterService;
 use Yiisoft\View\WebView;
 
 /**
- * @var ParameterService $parameterService
+ * @var ParameterService $parameters
  * @var WebView $this
  */
 ?>
 
 <head>
-    <meta charset="<?= Encode::content($parameterService->get('app.charset')) ?>">
+    <meta charset="<?= Encode::content($parameters->get('app.charset')) ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

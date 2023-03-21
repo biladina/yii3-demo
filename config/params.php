@@ -102,7 +102,7 @@ return [
             'currentRoute' => Reference::to(CurrentRoute::class),
             'flash' => Reference::to(FlashInterface::class),
             'locale' => Reference::to(Locale::class),
-            'parameterService' => Reference::to(ParameterService::class),
+            'parameters' => Reference::to(ParameterService::class),
             'translator' => Reference::to(TranslatorInterface::class),
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
         ],
