@@ -7,12 +7,12 @@ use Yiisoft\Translator\TranslatorInterface;
 use Yiisoft\View\WebView;
 
 /**
- * @var ParameterService $parameters
+ * @var ParameterService $parameter
  * @var TranslatorInterface $translator
  * @var WebView $this
  */
 
-$this->setTitle($parameters->get('app.name'));
+$this->setTitle($parameter->get('app.name'));
 ?>
 
 <div class="text-center">

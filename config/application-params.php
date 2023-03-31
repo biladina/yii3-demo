@@ -9,7 +9,9 @@ return [
         'name' => 'My Project',
         'theme' => 'dark', // light, dark
         'menu' => [
-            0 => ['label' => 'Home', 'route' => 'home'],
+            'guest' => [
+                ['label' => 'home', 'route' => 'home'],
+            ],
         ],
     ],
 ];

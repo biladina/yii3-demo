@@ -35,7 +35,6 @@ $runner = new RoadRunnerApplicationRunner(
     debug: $_ENV['YII_DEBUG'],
     checkEvents: $_ENV['YII_DEBUG'],
     environment: $_ENV['YII_ENV'],
-    diGroup: 'web',
     nestedEventsGroups: ['application-params', 'events'],
 );
 $runner->run();

@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 return [
     'config-plugin' => [
-        // Configuration yiisoft packages
+        // Application params Yii Tools
+        'application-params' => '?application-params.php',
+
+        // Configuration Yii3
         'params' => 'params.php',
         'params-web' => ['$params'],
         'params-console' => ['$params'],
@@ -12,9 +15,13 @@ return [
             'common/*.php',
         ],
         'di-web' => [
+            '$di',
             'web/*.php',
         ],
-        'di-console' => ['$di'],
+        'di-console' => [
+            '$di',
+            'console/*.php',
+        ],
         'bootstrap' => '?bootstrap.php',
         'bootstrap-web' => '$bootstrap',
         'bootstrap-console' => '$bootstrap',
@@ -22,20 +29,11 @@ return [
         'events-web' => ['$events'],
         'events-console' => ['$events'],
         'routes' => 'routes.php',
-
-        // Configuration yii-tools packages
-        'application-params' => '?application-params.php',
-        'common' => '$di',
-        'console' => [
-            '$common',
-            '$di-console',
-        ],
-        'web' => [
-            '$common',
-            '$di-web',
-        ],
     ],
     'config-plugin-options' => [
         'source-directory' => 'config',
+        'vendor-override-layer' => [
+            'yii-tools/contact-form',
+        ],
     ],
 ];

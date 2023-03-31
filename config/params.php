@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 use Psr\Log\LogLevel;
 use Yii\Demo\Command\Hello;
-use Yii\Demo\Command\Serve;
-use Yii\Service\ParameterService;
+use Yii\Service\ParameterInterface;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
+use Yiisoft\Cookies\CookieMiddleware;
 use Yiisoft\Definitions\Reference;
 use Yiisoft\ErrorHandler\Middleware\ErrorCatcher;
 use Yiisoft\I18n\Locale;
@@ -18,13 +18,14 @@ use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Session\Flash\FlashInterface;
 use Yiisoft\Session\SessionMiddleware;
 use Yiisoft\Translator\TranslatorInterface;
+use Yiisoft\User\Login\Cookie\CookieLoginMiddleware;
 use Yiisoft\Yii\View\CsrfViewInjection;
 
 return [
     // Internationalization (i18n)
     'locale' => [
         'locale' => 'en',
-        'locales' => ['en' => 'en-US', 'ru' => 'ru-RU'],
+        'locales' => ['en' => 'en-US', 'ru' => 'ru-RU', 'es' => 'es-ES'],
         'ignoredRequests' => [
             '/debug**',
         ],
@@ -34,6 +35,8 @@ return [
     'middlewares' => [
         ErrorCatcher::class,
         SessionMiddleware::class,
+        CookieMiddleware::class,
+        CookieLoginMiddleware::class,
         \Yiisoft\Yii\Middleware\Locale::class,
         Router::class,
     ],
@@ -102,7 +105,7 @@ return [
             'currentRoute' => Reference::to(CurrentRoute::class),
             'flash' => Reference::to(FlashInterface::class),
             'locale' => Reference::to(Locale::class),
-            'parameters' => Reference::to(ParameterService::class),
+            'parameter' => Reference::to(ParameterInterface::class),
             'translator' => Reference::to(TranslatorInterface::class),
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
         ],
@@ -121,7 +124,6 @@ return [
     'yiisoft/yii-console' => [
         'commands' => [
             'hello' => Hello::class,
-            'serve' => Serve::class,
         ],
     ],
 ];

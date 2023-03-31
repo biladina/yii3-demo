@@ -15,7 +15,7 @@ use Yiisoft\View\WebView;
  * @var AssetManager $assetManager
  * @var FlashInterface $flash
  * @var Locale $locale
- * @var ParameterService $parameters
+ * @var ParameterService $parameter
  * @var WebView $this
  */
 $assetManager->register(AppAsset::class);
@@ -30,11 +30,11 @@ $this->addJsVars($assetManager->getJsVars());
 <?php $this->beginPage()?>
     <!DOCTYPE html>
     <html lang="<?= Encode::content($locale->language()) ?>">
-        <?= $this->render('_head', ['parameters' => $parameters]) ?>
+        <?= $this->render('_head', ['parameter' => $parameter]) ?>
         <?php $this->beginBody() ?>
             <body
                 class="flex flex-col h-screen bg-gray-200 justify-between dark:bg-gray-500"
-                data-theme="<?= $parameters->get('app.theme') ?>"
+                data-theme="<?= $parameter->get('app.theme') ?>"
             >
                 <header>
                     <?= $this->render('_header') ?>
@@ -45,4 +45,4 @@ $this->addJsVars($assetManager->getJsVars());
             </body>
         <?php $this->endBody() ?>
     </html>
-<?php $this->endPage() ?>
+<?php $this->endPage();
