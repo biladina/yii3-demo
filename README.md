@@ -60,6 +60,7 @@ root
 │   └── routes.php                  Application routes.
 ├── public                          Files publicly accessible from the Internet.
 │   └── assets                      Published assets.
+│   └── avatar                      Avatar images.
 │   └── index.php                   Entry script.
 │   └── index-rr.php                Entry script for RoadRunner.
 ├── resources                       Application resources.

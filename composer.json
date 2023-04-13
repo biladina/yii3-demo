@@ -68,7 +68,7 @@
         "phpunit/phpunit": "^9.5",
         "roave/infection-static-analysis-plugin": "^1.25",
         "vimeo/psalm": "^5.8",
-        "yiisoft/db-sqlite": "^3.0@dev",
+        "yiisoft/db-sqlite": "^1.0",
         "yiisoft/translator-extractor": "^2.0"
     },
     "autoload": {

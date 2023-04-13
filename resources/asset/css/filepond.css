@@ -1,0 +1,9 @@
+/*
+! Custom FilePond CSS
+*/
+
+.filepond--root {
+  width: 170px !important;
+  height: 170px !important;
+  margin-bottom: 0 !important;
+}

@@ -56,6 +56,7 @@ return [
             '@runtime' => '@root/runtime',
             '@app-snippet' => '@resources/snippet',
             '@vendor' => '@root/vendor',
+            '@avatar' => '@public/avatar',
             '@views' => '@resources/views',
         ],
     ],
