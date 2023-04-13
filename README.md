@@ -31,6 +31,12 @@ cd demo
 composer update --prefer-dist -vvv
 ```
 
+Run migrations:
+
+```shell
+./yii migrate/up --no-interaction
+```
+
 To launch the application for PHP built-in web server, run the following command:
 
 ```shell
