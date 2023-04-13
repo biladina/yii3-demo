@@ -38,7 +38,7 @@ $items = $parameter->get('app.menu.guest');
 foreach ($items as $key => $item) {
     $menuItems[] = MenuItems::create()
         ->label($translator->translate($item['label'], category: 'app'))
-        ->link($urlGenerator->generate($item['route'], ['_language' => $translator->getLocale()]));
+        ->link($urlGenerator->generate($item['route']));
 }
 
 if (isset($identity) && $identity instanceof IdentityInterface) {
@@ -48,7 +48,7 @@ if (isset($identity) && $identity instanceof IdentityInterface) {
     foreach ($items as $key => $item) {
         $menuItems[] = MenuItems::create()
             ->label($translator->translate($item['label'], category: 'app'))
-            ->link($urlGenerator->generate($item['route'], ['_language' => $translator->getLocale()]));
+            ->link($urlGenerator->generate($item['route']));
     }
 
     $button = Form::widget()

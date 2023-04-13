@@ -37,7 +37,6 @@ return [
         SessionMiddleware::class,
         CookieMiddleware::class,
         CookieLoginMiddleware::class,
-        \Yiisoft\Yii\Middleware\Locale::class,
         Router::class,
     ],
 
