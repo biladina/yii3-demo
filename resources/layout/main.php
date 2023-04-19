@@ -6,16 +6,16 @@ use Yii\Demo\Asset\AppAsset;
 use Yii\Html\Helper\Encode;
 use Yii\Service\ParameterService;
 use Yiisoft\Assets\AssetManager;
-use Yiisoft\I18n\Locale;
 use Yiisoft\Session\Flash\FlashInterface;
+use Yiisoft\Translator\TranslatorInterface;
 use Yiisoft\View\WebView;
 
 /**
  * @var string $content
  * @var AssetManager $assetManager
  * @var FlashInterface $flash
- * @var Locale $locale
  * @var ParameterService $parameter
+ * @var TranslatorInterface $translator
  * @var WebView $this
  */
 $assetManager->register(AppAsset::class);
@@ -29,7 +29,7 @@ $this->addJsVars($assetManager->getJsVars());
 
 <?php $this->beginPage()?>
     <!DOCTYPE html>
-    <html lang="<?= Encode::content($locale->language()) ?>">
+    <html lang="<?= Encode::content($translator->getLocale()) ?>">
         <?= $this->render('_head', ['parameter' => $parameter]) ?>
         <?php $this->beginBody() ?>
             <body

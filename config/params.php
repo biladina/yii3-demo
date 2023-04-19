@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 use Psr\Log\LogLevel;
 use Yii\Demo\Command\Hello;
+use Yii\Middleware\Locale;
 use Yii\Service\ParameterInterface;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Cookies\CookieMiddleware;
 use Yiisoft\Definitions\Reference;
 use Yiisoft\ErrorHandler\Middleware\ErrorCatcher;
-use Yiisoft\I18n\Locale;
 use Yiisoft\Log\Target\File\FileTarget;
 use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Router\Middleware\Router;
@@ -22,22 +22,22 @@ use Yiisoft\User\Login\Cookie\CookieLoginMiddleware;
 use Yiisoft\Yii\View\CsrfViewInjection;
 
 return [
-    // Internationalization (i18n)
-    'locale' => [
-        'locale' => 'en',
-        'locales' => ['en' => 'en-US', 'ru' => 'ru-RU', 'es' => 'es-ES'],
-        'ignoredRequests' => [
-            '/debug**',
-        ],
-    ],
-
     // Middlewares stack
     'middlewares' => [
         ErrorCatcher::class,
         SessionMiddleware::class,
         CookieMiddleware::class,
         CookieLoginMiddleware::class,
+        Locale::class,
         Router::class,
+    ],
+
+    // yii-tools/middleware
+    'yii-tools/middleware' => [
+        'locale' => [
+            'languages' => ['en' => 'en-US', 'es' => 'es-ES', 'ru' => 'ru-RU'],
+            'ignoredUrls' => ['/debug**'],
+        ],
     ],
 
     // Aliases

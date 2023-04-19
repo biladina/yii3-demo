@@ -23,6 +23,7 @@
         "yii-tools/flowbite-asset": "^1.0@dev",
         "yii-tools/fontawesome-asset": "^1.0@dev",
         "yii-tools/html": "^1.0@dev",
+        "yii-tools/middleware": "^1.0@dev",
         "yii-tools/service": "^1.0@dev",
         "yii-tools/user": "^1.0@dev",
         "yiisoft/aliases": "^2.0|^3.0",
