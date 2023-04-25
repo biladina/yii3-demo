@@ -13,6 +13,9 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 
+# KDE hidden file
+.directory
+
 # windows thumbnail cache
 Thumbs.db
 
@@ -42,5 +45,11 @@ c3.php
 # Composer
 composer.lock
 
+# NPM
+package-lock.json
+
 # yiisoft/config
 /config/.merge-plan.php
+
+# docker nohoup
+nohup.out
