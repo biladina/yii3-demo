@@ -52,6 +52,36 @@ To launch the application for [RoadRunner](https://roadrunner.dev/) web server, 
 
 Now you should be able to access the application through the URL printed to console. Usually it is http://localhost:8080.
 
+## Install with Docker
+
+You can then install this project template using docker with the following command:
+
+```shell
+git clone https://github.com/yii-tools/demo.git demo
+cd demo
+```
+
+Build the container
+
+    docker compose build --no-cache && docker compose up -d
+    
+Update your vendor packages
+
+    docker exec -it yii3-demo composer update --prefer-dist -vvv
+    
+Run migrations
+
+    docker exec -it yii3-demo php yii migrate/up --no-interaction
+
+Change directory owner (optional, if encounter db write problem or upload file problem)
+    
+    docker exec -it yii3-demo bash
+    chown www-data:www-data -R resources/db && chown www-data:www-data -R public/avatar
+    
+You can then access the application through the following URL:
+
+    http://127.0.0.1:8100
+
 ## Directory structure
 
 The application template has the following structure directory:
