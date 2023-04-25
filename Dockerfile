@@ -15,7 +15,7 @@ COPY docker/supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 COPY docker/supervisord/conf.d/apache2.conf /etc/supervisor/conf.d/apache2.conf
 
 # copy yii-queue config
-COPY docker/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/yii-queue.conf
+#COPY docker/supervisord/conf.d/queue.conf /etc/supervisor/conf.d/yii-queue.conf
 
 # run supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]

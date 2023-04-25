@@ -26,6 +26,7 @@ If you want to configure your application you can see the corresponding guide:
 - [Multiple apps with sub folder middleware](/docs/guide/multiple-apps.md)
 - [Service providers](/docs/guide/service-provider.md)
 - [Widget snippet](/docs/guide/widget-snnipet.md)
+- [Yii Queue in Docker](/docs/guide/yii-queue-docker.md)
 
 ## Flowbite 
 
