@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  yii3-demo:
+    restart: always
+    build: .
+    container_name: yii3-demo
+    working_dir: /app
+    volumes:
+      - ./:/app
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+    ports:
+      - '8100:80'
+    environment:
+      TZ: "UTC"
